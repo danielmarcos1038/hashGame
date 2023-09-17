@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,500;1,700&display=swap');
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: #eef9bf;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #75B79E;
+    font-size: 56px;
+    font-weight: 700;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.escondido {
+    display: none;
+}
+
+.cartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+
+    perspective: 1000px;
+}
+
+.carta {
+    background-color: #A7E9AF;
+    width: 117px;
+    height: 146px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 34px 60px;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+    position: relative;
+
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+
+.back-face {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.virada {
+    /* background-image: url("../imagens/bobrossparrot.gif"); */
+
+    transform: rotateY(180deg);
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Media Queries */
+
+@media (max-width: 500px) {
+
+    .topo {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 36px;
+    }
+
+    .cartas {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
